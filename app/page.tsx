@@ -174,11 +174,8 @@ export default function Home() {
             Two things you sign for today. A scoped, fixed-price build proposal at the end of week two. That is the whole deal.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <a href="#pricing" className="pill pill-white">
-              See Pricing
-            </a>
-            <a href="#next" className="pill pill-black border border-white/30">
-              Reply Yes
+            <a href="#next" className="pill pill-white">
+              Get in touch
             </a>
           </div>
           <div className="mt-12 flex flex-col sm:flex-row gap-x-6 gap-y-1 text-sm text-white/60">
@@ -440,27 +437,15 @@ export default function Home() {
             Send a yes and I will have a short agreement (two pages, plain English) in your inbox within 24 hours. Week zero starts Monday. Assessment and Lessons kick off the same week.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href="mailto:zachary.noble1@gmail.com?subject=Yes,%20let%27s%20start" className="pill pill-white">
-              Email Noble: Yes, let&apos;s start
-            </a>
-            <a href="tel:+19143290467" className="pill pill-black">
-              Call (914) 329-0467
-            </a>
-          </div>
-
-          <div className="border-t border-white/30 pt-8">
-            <p className="font-display text-3xl text-white mb-1">Noble</p>
-            <p className="small-caps text-white/80 mb-4">Founder, Ennoble</p>
-            <div className="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-1 text-white/90">
-              <a href="mailto:zachary.noble1@gmail.com" className="link-underline text-sm">
-                zachary.noble1@gmail.com
-              </a>
-              <span className="hidden sm:inline text-white/40">·</span>
-              <a href="tel:+19143290467" className="link-underline text-sm">
-                (914) 329-0467
-              </a>
-            </div>
+          <div className="border-t border-white/30 pt-10">
+            <p className="small-caps text-white/80 mb-4">Reach me any of these ways</p>
+            <p className="font-display text-white text-3xl sm:text-4xl leading-tight mb-6">
+              Email <a href="mailto:zachary.noble1@gmail.com" className="link-underline">zachary.noble1@gmail.com</a>
+              <br />
+              or call, text, or WhatsApp <a href="tel:+19143290467" className="link-underline">(914) 329-0467</a>.
+            </p>
+            <p className="font-display text-2xl text-white">Noble</p>
+            <p className="small-caps text-white/70">Founder, Ennoble</p>
           </div>
         </div>
       </section>
