@@ -10,27 +10,33 @@ export default async function GatePage({
   const error = params.error === "1";
 
   return (
-    <main className="min-h-dvh flex items-center justify-center px-6 py-16">
+    <main className="min-h-dvh bg-black flex items-center justify-center px-6 py-16">
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
-          <div className="mx-auto gold-bar mb-6" />
-          <h1 className="font-display text-3xl sm:text-4xl text-[color:var(--color-ink)] mb-3">
-            Fuente Latina + Ennoble
+          <div className="flex justify-center mb-8">
+            <span className="logo-box">
+              <span className="text-2xl">FUENTE</span>
+              <span className="text-2xl">LATINA</span>
+            </span>
+          </div>
+          <div className="rule-thick-white mx-auto mb-6" />
+          <h1 className="font-display text-4xl sm:text-5xl text-white mb-3">
+            Fuente Latina <span className="text-[color:var(--color-fl-blue)]">+</span> Ennoble
           </h1>
-          <p className="small-caps text-[color:var(--color-muted)]">Private Proposal</p>
+          <p className="small-caps text-white/70">Private Proposal</p>
         </div>
 
         <form
           method="POST"
           action="/api/auth"
-          className="bg-white/70 border border-[color:var(--color-rule)] rounded-lg p-6 shadow-sm"
+          className="bg-white/5 border border-white/15 rounded-lg p-6"
         >
           <input type="hidden" name="from" value={from} />
           <label
             htmlFor="password"
-            className="block text-sm font-semibold text-[color:var(--color-ink)] mb-2"
+            className="block small-caps text-white/80 mb-3"
           >
-            Enter access code
+            Access Code
           </label>
           <input
             id="password"
@@ -38,23 +44,23 @@ export default async function GatePage({
             type="password"
             autoFocus
             autoComplete="off"
-            className="w-full rounded-md border border-[color:var(--color-rule)] bg-white px-4 py-3 text-base text-[color:var(--color-ink)] focus:border-[color:var(--color-fl-blue)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-fl-blue)]/20"
-            placeholder="Access code"
+            className="w-full rounded-md border border-white/20 bg-black px-4 py-3 text-base text-white placeholder-white/40 focus:border-[color:var(--color-fl-blue)] focus:outline-none focus:ring-2 focus:ring-[color:var(--color-fl-blue)]/40"
+            placeholder="Enter code"
           />
           {error && (
-            <p className="mt-3 text-sm text-[color:var(--color-fl-red)]">
+            <p className="mt-3 text-sm text-[color:var(--color-fl-red)] font-semibold">
               That code did not match. Try again.
             </p>
           )}
           <button
             type="submit"
-            className="mt-5 w-full rounded-md bg-[color:var(--color-ink)] px-4 py-3 text-white font-semibold text-sm tracking-wide hover:bg-[color:var(--color-fl-blue-deep)] transition-colors"
+            className="pill pill-white mt-5 w-full"
           >
             Enter
           </button>
         </form>
 
-        <p className="text-center text-xs text-[color:var(--color-muted-2)] mt-8">
+        <p className="text-center text-xs text-white/50 mt-8 small-caps">
           For Leah, Gigi, and the Fuente Latina team.
         </p>
       </div>

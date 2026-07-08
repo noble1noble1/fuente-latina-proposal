@@ -1,23 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #faf7f2;
-  --color-cream-2: #f2ede3;
-  --color-ink: #1a1a1a;
-  --color-ink-2: #2a2622;
-  --color-muted: #5a544a;
-  --color-muted-2: #8a8378;
-  --color-rule: #e6dfd1;
-  --color-fl-blue: #1e92d3;
-  --color-fl-blue-deep: #146fa3;
-  --color-fl-red: #b80606;
-  --color-gold: #b8892c;
-  --font-serif: "Playfair Display", Georgia, serif;
-  --font-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Fuente Latina brand palette */
+  --color-black: #000000;
+  --color-ink: #111111;
+  --color-ink-2: #1f1f1f;
+  --color-body: #2a2a2a;
+  --color-muted: #5a5a5a;
+  --color-muted-2: #8a8a8a;
+  --color-rule: #e5e5e5;
+  --color-paper: #ffffff;
+  --color-paper-2: #f6f6f6;
+  --color-fl-blue: #1AB4E8;
+  --color-fl-blue-deep: #0F5E80;
+  --color-fl-red: #C8272C;
+  --font-display: "Bebas Neue", Impact, "Arial Narrow Bold", sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 html, body {
-  background: var(--color-cream);
+  background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -25,16 +27,18 @@ html, body {
 }
 
 .font-display {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  line-height: 0.95;
 }
 
 .small-caps {
   font-family: var(--font-sans);
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   font-size: 0.72rem;
 }
 
@@ -43,8 +47,8 @@ html, body {
 }
 
 .prose-fl p {
-  color: var(--color-ink);
-  line-height: 1.75;
+  color: var(--color-body);
+  line-height: 1.65;
   font-size: 1.02rem;
   margin-bottom: 1.1rem;
 }
@@ -58,11 +62,80 @@ html, body {
   padding-bottom: 1px;
 }
 
-.link-underline:hover { color: var(--color-fl-blue-deep); }
+.link-underline:hover { color: var(--color-fl-blue); }
 
-.gold-bar {
-  height: 3px;
-  width: 42px;
-  background: var(--color-gold);
-  border-radius: 2px;
+/* Chunky pill buttons, FL style */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.6rem;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pill-white {
+  background: #ffffff;
+  color: #000000;
+}
+
+.pill-white:hover {
+  background: var(--color-fl-blue);
+  color: #ffffff;
+}
+
+.pill-black {
+  background: #000000;
+  color: #ffffff;
+}
+
+.pill-black:hover {
+  background: var(--color-fl-blue-deep);
+  color: #ffffff;
+}
+
+/* Boxed logo mark */
+.logo-box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.4rem 0.7rem;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* Red hot badge, used sparingly */
+.badge-red {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  background: var(--color-fl-red);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+}
+
+/* Bold section rule, replaces gold bar */
+.rule-thick {
+  height: 6px;
+  width: 60px;
+  background: var(--color-fl-blue);
+}
+
+.rule-thick-white {
+  height: 6px;
+  width: 60px;
+  background: #ffffff;
 }
